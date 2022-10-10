@@ -1,7 +1,8 @@
 import React from 'react';
 
-const Quiz = ({ quiz }) => {
+const Quiz = ({ quiz, handleTextQuiz }) => {
     const { id, name, logo, total } = quiz;
+
     return (
         <div>
             <div className="max-w-xs rounded-md shadow-md dark:bg-gray-900 dark:text-gray-100">
@@ -11,7 +12,7 @@ const Quiz = ({ quiz }) => {
                         <h2 className="text-3xl font-semibold tracking-wide">{name}</h2>
                         <p className="dark:text-gray-100">Total Quiz : {total} </p>
                     </div>
-                    <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-indigo-600  text-white">Test Now</button>
+                    <button onClick={() => handleTextQuiz(quiz)} type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-indigo-600  text-white">Test Now</button>
                 </div>
             </div>
 

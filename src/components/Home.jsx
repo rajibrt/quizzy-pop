@@ -7,7 +7,9 @@ import Quiz from './Quiz'
 
 const Home = () => {
     const quizzes = useLoaderData();
-    console.log(quizzes.data.length);
+    const handleTextQuiz = quiz => {
+        console.log(quiz)
+    }
 
     return (
         <div>
@@ -21,6 +23,7 @@ const Home = () => {
                         quizzes.data.map(quiz => <Quiz
                             key={quiz.id}
                             quiz={quiz}
+                            handleTextQuiz={handleTextQuiz}
                         ></Quiz>)
                     }
                 </div>
