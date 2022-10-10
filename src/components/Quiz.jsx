@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Quiz = ({ quiz, handleTextQuiz }) => {
+const Quiz = ({ quiz }) => {
     const { id, name, logo, total } = quiz;
 
     return (
@@ -12,7 +13,7 @@ const Quiz = ({ quiz, handleTextQuiz }) => {
                         <h2 className="text-3xl font-semibold tracking-wide">{name}</h2>
                         <p className="dark:text-gray-100">Total Quiz : {total} </p>
                     </div>
-                    <button onClick={() => handleTextQuiz(quiz)} type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-indigo-600  text-white">Test Now</button>
+                    <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-indigo-600 uppercase text-white"><Link to={`/quiz/${id}`}>Start Practice</Link></button>
                 </div>
             </div>
 

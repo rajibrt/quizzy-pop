@@ -5,6 +5,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import ErrorPage from './components/ErrorPage';
 import Home from './components/Home';
+import Practice from './components/Practice';
 
 
 function App() {
@@ -26,6 +27,13 @@ function App() {
         {
           path: '/contact',
           element: <Contact></Contact>
+        },
+        {
+          path: '/quiz/:quizId',
+          loader: async ({ params }) => {
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`)
+          },
+          element: <Practice></Practice>
         }
 
       ]
