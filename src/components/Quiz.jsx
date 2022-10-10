@@ -16,11 +16,6 @@ const Quiz = ({ quiz }) => {
                     <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-indigo-600 uppercase text-white"><Link to={`/quiz/${id}`}>Start Practice</Link></button>
                 </div>
             </div>
-
-
-
-
-
         </div>
     );
 };
