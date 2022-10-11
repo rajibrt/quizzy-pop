@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import Button from './Button';
 
 const Navbar = () => {
@@ -8,10 +8,13 @@ const Navbar = () => {
         { name: "Quiz", link: "/" },
         { name: "Statistics", link: "/statistics" },
         { name: "Blog", link: "/blog" },
-
-
     ];
     let [open, setOpen] = useState(false);
+
+    let activeStyle = {
+        color: "purple",
+    };
+    let activeClassName = "underline";
 
     return (
         <div className='shadow-md w-full mb-1 left-0' >
@@ -29,7 +32,9 @@ const Navbar = () => {
                     {
                         Links.map((link) => (
                             <li key={link.link} className='md:ml-8 text-xl md:my-0 my-7'>
-                                <Link to={link.link} className='tex-gray-800 hover:text-gray-400 duration-500'>{link.name}</Link>
+                                <NavLink style={({ isActive }) =>
+                                    isActive ? activeStyle : undefined
+                                } to={link.link} className='tex-gray-800 hover:text-gray-400 duration-500'>{link.name}</NavLink>
                             </li>
                         ))
                     }
