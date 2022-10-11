@@ -1,11 +1,10 @@
 // import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './layouts/Main';
-import About from './components/About';
-import Contact from './components/Contact';
 import ErrorPage from './components/ErrorPage';
 import Home from './components/Home';
 import Practice from './components/Practice';
+import Statistics from './components/Statistics';
 
 
 function App() {
@@ -21,12 +20,9 @@ function App() {
           element: <Home></Home>
         },
         {
-          path: '/about',
-          element: <About></About>
-        },
-        {
-          path: '/contact',
-          element: <Contact></Contact>
+          path: '/statistics',
+          loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
+          element: <Statistics></Statistics>
         },
         {
           path: '/quiz/:quizId',

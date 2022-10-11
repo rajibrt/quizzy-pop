@@ -1,5 +1,4 @@
-import { data } from 'autoprefixer';
-import React, { useState } from 'react';
+import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Hero from './Hero';
 import Quiz from './Quiz'

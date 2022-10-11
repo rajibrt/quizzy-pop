@@ -5,9 +5,8 @@ import Button from './Button';
 const Navbar = () => {
     let Links = [
 
-        { name: "Home", link: "/" },
-        { name: "About", link: "/about" },
-        { name: "Contact", link: "/contact" },
+        { name: "Quiz", link: "/" },
+        { name: "Statistics", link: "/statistics" },
 
     ];
     let [open, setOpen] = useState(false);
@@ -33,7 +32,6 @@ const Navbar = () => {
                         ))
                     }
                     <Button>Get In Touch</Button>
-                    <Button>Admission</Button>
                 </ul>
             </div>
 
