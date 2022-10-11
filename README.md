@@ -2,10 +2,10 @@
 Live link: https://quizzy-pop.netlify.app
 
 # Website summary:
- > It's a web desing relaetd quiz website.
- > This quiz side I maded with react js.
- > This website is fully responsive for all kind of device.
- > Websie with mordern design.
+### `It's a web desing relaetd quiz website.`
+### `This quiz side I maded with react js.`
+### `This website is fully responsive for all kind of device.`
+### `Websie with mordern design.`
  
 # Getting Started with Create React App
 
