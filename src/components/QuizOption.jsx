@@ -33,7 +33,7 @@ const QuizOption = ({ data, index }) => {
 
                 <h2 className='rounded-md py-1 px-2 font-bold border-dotted border-2 border-white'>Quiz No: {index + 1} </h2>
 
-                <div onClick={() => rightAnswer(id)}><ion-icon name="eye"></ion-icon></div>
+                <div className='cursor-pointer' onClick={() => rightAnswer(id)}><ion-icon name="eye"></ion-icon></div>
             </div>
             <h2>Q. {qa} </h2>
 

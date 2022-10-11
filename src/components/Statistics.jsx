@@ -7,9 +7,15 @@ const Statistics = () => {
     console.log(quizzes);
 
     return (
-        <div>
+        <div className='grid justify-center my-10'>
+            <h2 className='text-center text-2xl font-bold text-indigo-500'>Statistics Chart</h2>
             <LineChart width={500} height={400} data={quizzes}>
                 <Line type='name' dataKey='total' stroke="#82ca9d" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <CartesianGrid />
+                <ResponsiveContainer />
             </LineChart>
         </div>
     );
