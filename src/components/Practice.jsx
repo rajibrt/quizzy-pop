@@ -13,9 +13,10 @@ const Practice = () => {
             </div>
             <div className='relative grid justify-items-center gap-5 sm:grid-cols-2 lg:grid-cols-2 my-6 outline-1border-solid bg-indigo-200 border-2 border-indigo-400 md:w-4/6 w-5/6 m-auto rounded-lg p-10'>
                 {
-                    data.questions.map(options => <QuizOption
-                        key={options.id}
-                        option={options}
+                    data.questions.map((data, index) => <QuizOption
+                        key={data.id}
+                        data={data}
+                        index={index}
                     ></QuizOption>)
                 }
 
