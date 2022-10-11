@@ -23,11 +23,9 @@ const QuizOption = ({ data, index }) => {
             toast("Wrong Answer");
         }
     }
-
-    // const answer = () => {
-
-    // }
-
+    const rightAnswer = () => {
+        toast(`${correctAnswer}`)
+    }
     return (
         <div className='outline-1border-solid bg-indigo-600 border-2 border-indigo-300 p-3 rounded-lg min-w-full text-white'>
 
@@ -35,7 +33,7 @@ const QuizOption = ({ data, index }) => {
 
                 <h2 className='rounded-md py-1 px-2 font-bold border-dotted border-2 border-white'>Quiz No: {index + 1} </h2>
 
-                {/* <div onClick={() => handleAnswers()}><ion-icon name="eye"></ion-icon></div> */}
+                <div onClick={() => rightAnswer(id)}><ion-icon name="eye"></ion-icon></div>
             </div>
             <h2>Q. {qa} </h2>
 
